@@ -12,4 +12,14 @@ import { HeaderComponent } from './header/header.component';
 })
 export class AppComponent {
   title: string = 'dynamic :D';
+  imgUrl: string = 'https://th.bing.com/th/id/OIP.U_VJuupQohwnzXcKMztqWgHaEo?rs=1&pid=ImgDetMain'
+  isDisable: boolean = false
+  isActive: boolean = true
+  fruitName: string = 'Apple'
+  press(event : any) {
+    console.log(event);
+  }
+  press2() {
+    console.log('submit');
+  }
 }

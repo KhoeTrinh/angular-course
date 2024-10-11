@@ -1,3 +1,24 @@
-<h1>{{ title }}</h1>
 <app-navbar></app-navbar>
 <app-header></app-header>
+<h1>{{ title }}</h1>
+<p>{{ "1 + 1" }} = {{ 1 + 1 }}</p>
+<img [src]="imgUrl" alt="" /> <br />
+<button disabled="{{ isDisable }}">
+  Disabled button using string interpolation
+</button>
+<button [disabled]="isDisable">Disabled button using property binding</button>
+
+<button
+  [class.active]="isActive"
+  [class.active-border]="isActive"
+  [class.no-active]="!isActive"
+  [class.no-active-border]="!isActive"
+>
+  CLick me
+</button>
+<button [class.apple]="fruitName === 'Apple'">Fruit ninja</button>
+
+<button [style.background]="isActive ? 'blue' : 'red'">Click</button>
+
+<input placeholder="press" type="text" (keyup)="press($event)">
+<input type="text" placeholder="1" (keyup.enter)="press2()">
