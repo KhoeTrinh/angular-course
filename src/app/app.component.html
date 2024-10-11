@@ -20,5 +20,18 @@
 
 <button [style.background]="isActive ? 'blue' : 'red'">Click</button>
 
-<input placeholder="press" type="text" (keyup)="press($event)">
-<input type="text" placeholder="1" (keyup.enter)="press2()">
+<input placeholder="press" type="text" (keyup)="press($event)" />
+<input type="text" placeholder="1" (keyup.enter)="press2(user)" #user />
+
+<input
+  type="text"
+  placeholder="1"
+  [value]="username"
+  #usernam
+  (keyup.enter)="updateUsername(usernam)"
+/>
+
+<input type="text" [(ngModel)]="username">
+<h3>
+  {{username}}
+</h3>
