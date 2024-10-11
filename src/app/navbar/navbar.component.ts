@@ -4,7 +4,9 @@ import { Component } from '@angular/core';
   selector: 'app-navbar',
   standalone: true,
   templateUrl: './navbar.component.html',
-  styleUrls: ['./navbar.component.css']
+  styleUrl: './navbar.component.css'
 
 })
-export class AppNavbar {}
+export class AppNavbar {
+  title = 'Khoa'
+}
